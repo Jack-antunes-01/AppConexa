@@ -46,3 +46,14 @@ export const InquiryList = styled.FlatList.attrs(() => {
 })`
   ${() => css``}
 `;
+
+export const Loading = styled.ActivityIndicator.attrs(({ theme }) => {
+  return {
+    size: 'large',
+    color: theme.colors.brand.primary,
+  };
+})`
+  ${() => css`
+    height: ${moderateScale(20)}px;
+  `}
+`;

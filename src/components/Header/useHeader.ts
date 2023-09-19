@@ -12,7 +12,11 @@ const useHeader = () => {
     Alert.alert('Pega leve man, o tempo é curto');
   };
 
-  return { onUserPressed, onDrawerPressed };
+  const onGoBackPressed = () => {
+    navigation.goBack();
+  };
+
+  return { onUserPressed, onDrawerPressed, onGoBackPressed };
 };
 
 export { useHeader };

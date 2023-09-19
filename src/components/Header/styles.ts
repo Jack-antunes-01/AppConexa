@@ -23,3 +23,13 @@ export const MenuIcon = styled(MaterialCommunityIcon).attrs(({ theme }) => {
 })`
   ${() => css``}
 `;
+
+export const ArrowLeft = styled(MaterialCommunityIcon).attrs(({ theme }) => {
+  return {
+    name: 'arrow-left',
+    size: moderateScale(32),
+    color: theme.colors.brand.primary,
+  };
+})`
+  ${() => css``}
+`;
