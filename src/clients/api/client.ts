@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Platform } from 'react-native';
 import Config from 'react-native-config';
 
 import { LocalStorage } from '@app/contexts/localStorage';
@@ -18,7 +19,7 @@ export type AxiosErrorResponse = {
 };
 
 export const axiosClient = axios.create({
-  baseURL: Config.API_URL,
+  baseURL: __DEV__ && Platform.OS === 'android' ? Config.API_URL?.replace('desafio.conexasaude.com.br', '54.207.104.91') : Config.API_URL,
 });
 
 axiosClient.interceptors.response.use(
