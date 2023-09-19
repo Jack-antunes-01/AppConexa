@@ -2,23 +2,20 @@ import React from 'react';
 
 import * as S from '@app/components/InquiryCard/styles';
 import { TEXT_VARIANTS, Text } from '@app/components/Text';
+import { parseCreatedAt } from '@app/utils/date';
 
 type InquiryCardProps = {
   patientName: string;
   observation: string;
   createdAt: string;
+  onPress: () => void;
 };
 
-function InquiryCard({ createdAt, observation, patientName }: InquiryCardProps) {
-  const parseCreatedAt = (value: string) => {
-    const dateSplit = value.split(' ');
-    const date = dateSplit[0].split('-').reverse().join('/');
-    const time = dateSplit[1];
-    return `${date} ${time}`;
-  };
-
+function InquiryCard({
+  onPress, createdAt, observation, patientName,
+}: InquiryCardProps) {
   return (
-    <S.CardContainer>
+    <S.CardContainer onPress={onPress}>
       <S.TitleContainer>
         <Text title={patientName} isBold variant={TEXT_VARIANTS.title} />
       </S.TitleContainer>
