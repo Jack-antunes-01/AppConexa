@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Conexa - Desafio</string>
+    <string name="splash_description">SplashScreen</string>
 </resources>
