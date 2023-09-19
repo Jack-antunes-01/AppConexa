@@ -6,9 +6,7 @@ module.exports = {
       {
         root: ['./src/'],
         alias: {
-          '@app/atoms': './src/components/atoms',
-          '@app/molecules': './src/components/molecules',
-          '@app/organisms': './src/components/organisms',
+          '@app/components': './src/components',
           '@app/routes': './src/routes',
           '@app/pages': './src/pages',
           '@app/utils': './src/utils',
@@ -17,6 +15,7 @@ module.exports = {
           '@app/services': './src/services',
           '@app/models': './src/models',
           '@app/contexts': './src/contexts',
+          '@app/assets': './src/assets',
         },
       },
     ],

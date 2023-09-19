@@ -26,10 +26,10 @@
           "ignoreCase": true
         }
       }
-    ]
-  },
-  "globals": {
-    "__DEV__": true
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "arrow-body-style": "off"
   },
   "settings": {
     "import/resolver": {
