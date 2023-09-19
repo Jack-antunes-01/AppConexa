@@ -33,6 +33,7 @@ function AnimatedInput({
 }: InputProps) {
   // eslint-disable-next-line no-prototype-builtins
   const hasError = !!errors && typeof errors === 'object' && errors.hasOwnProperty(name) && errors[name]?.message;
+  console.log('🚀 ~ file: index.tsx:36 ~ hasError: ', JSON.stringify(hasError, null, 4), '');
 
   const inputRef = useRef<TextInput>(null);
   const animatedValue = useRef(new Animated.Value(0)).current;
