@@ -1,4 +1,4 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+About tests and the rest of operations, i can do in live.
 
 # Getting Started
 
@@ -6,12 +6,6 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 Check the Figma Prototype:
 https://www.figma.com/file/txhwLUPp4rapkZ6oE5B1XE/Conexa-App-Desafio?type=design&node-id=1%3A11&mode=design&t=qENZ6QgXysK0M3pJ-1
-
-## Step 0: Setup Environment
-
-https://reactnative.dev/docs/environment-setup
-
-Install and configure Android Studio.
 
 ## Step 1: Install packages
 
