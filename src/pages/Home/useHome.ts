@@ -34,8 +34,9 @@ const useHome = () => {
   }, [setInquiryList]);
 
   const onInquiryPressed = (inquiry: InquiryModel) => {
-    // Poderia usar o context, redux, zustand para armazenar.
-    // Mas vamos de exemplo de route props.
+    // Configuro o service ao vivo se necessário api/consultas/${inquiry.id}
+    // Apesar que o retorno será o mesmo que o inquiry que estou recebendo via props
+    // Mas em uma situação real, sim, realmente precisaria chamar o endpoint.
     navigation.navigate(Routes.InquiryDetails, { inquiry });
   };
 

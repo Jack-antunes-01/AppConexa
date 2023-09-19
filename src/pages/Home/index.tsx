@@ -44,8 +44,7 @@ export function Home() {
           : (
             <S.InquiryList
               data={inquiryList}
-              // Em um cenário real, não é recomendável usar index como key
-              keyExtractor={(_, idx) => idx.toString()}
+              keyExtractor={(item) => (item as InquiryModel).id.toString()}
               renderItem={({ item }) => renderItem(item as InquiryModel)}
               ItemSeparatorComponent={ItemSeparatorComponent}
               ListEmptyComponent={ListEmptyComponent}

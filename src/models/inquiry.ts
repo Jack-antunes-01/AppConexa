@@ -1,5 +1,5 @@
 export type InquiryModel = {
-  idMedico: number;
+  id: number;
   dataConsulta: string;
   observacao: string;
   paciente: string;
