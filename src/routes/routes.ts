@@ -7,4 +7,5 @@ export const Routes = {
   NeedHelp: 'NeedHelp',
   ForgotPassword: 'ForgotPassword',
   InquiryDetails: 'InquiryDetails',
+  InquirySuccess: 'InquirySuccess',
 } as const;

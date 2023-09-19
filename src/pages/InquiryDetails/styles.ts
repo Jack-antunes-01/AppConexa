@@ -7,10 +7,18 @@ export const Container = styled.View`
   `}
 `;
 
+// A falta que um componente não faz..
 export const Loading = styled.ActivityIndicator.attrs(({ theme }) => {
   return {
     size: 'large',
     color: theme.colors.brand.primary,
+  };
+})``;
+
+export const ButtonLoading = styled.ActivityIndicator.attrs(({ theme }) => {
+  return {
+    size: 'large',
+    color: theme.colors.neutral.white,
   };
 })``;
 
@@ -47,6 +55,7 @@ export const DescriptionContainer = styled.ScrollView`
   ${() => css``}
 `;
 
+// Outro componente aqui seria lindo..
 export const ConfirmInquiryButton = styled.Pressable.attrs(({ theme }) => {
   return {
     android_ripple: { color: theme.colors.others.ripple },

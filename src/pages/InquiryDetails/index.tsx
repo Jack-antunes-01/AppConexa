@@ -8,7 +8,9 @@ import { useInquiryDetails } from '@app/pages/InquiryDetails/useInquiryDetails';
 import { parseCreatedAt } from '@app/utils/date';
 
 function InquiryDetails() {
-  const { inquiry, patientImage, isLoading } = useInquiryDetails();
+  const {
+    inquiry, patientImage, isLoading, onConfirmInquiryPressed, isLoadingButton,
+  } = useInquiryDetails();
 
   const renderPatientImage = () => {
     if (patientImage) {
@@ -40,8 +42,14 @@ function InquiryDetails() {
           <Text title={inquiry?.observacao || InquiryDetailsLocales.defaultDescriptionMessage} />
         </S.DescriptionContainer>
       </S.ContentContainer>
-      <S.ConfirmInquiryButton>
-        <Text title={InquiryDetailsLocales.confirmInquiry} isBold variant={TEXT_VARIANTS.white} />
+      <S.ConfirmInquiryButton onPress={onConfirmInquiryPressed}>
+        {isLoadingButton ? <S.ButtonLoading /> : (
+          <Text
+            title={InquiryDetailsLocales.confirmInquiry}
+            isBold
+            variant={TEXT_VARIANTS.white}
+          />
+        )}
       </S.ConfirmInquiryButton>
     </S.Container>
   );

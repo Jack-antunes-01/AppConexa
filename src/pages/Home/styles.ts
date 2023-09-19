@@ -52,8 +52,4 @@ export const Loading = styled.ActivityIndicator.attrs(({ theme }) => {
     size: 'large',
     color: theme.colors.brand.primary,
   };
-})`
-  ${() => css`
-    height: ${moderateScale(20)}px;
-  `}
-`;
+})``;
