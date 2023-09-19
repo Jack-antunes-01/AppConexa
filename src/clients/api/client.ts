@@ -31,7 +31,7 @@ axiosClient.interceptors.request.use(
   async (requestConfig) => {
     const token = await LocalStorage.auth.getStoredToken();
     if (token) {
-      Object.assign(requestConfig.headers, { Authorization: token });
+      Object.assign(requestConfig.headers, { Authorization: `Bearer ${token}` });
     }
     return requestConfig;
   },

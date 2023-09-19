@@ -1,19 +1,25 @@
-import { DatabaseServices } from '@app/services';
+import { useNavigation } from '@react-navigation/native';
+import { useEffect } from 'react';
+
+import { useInquiryContext } from '@app/contexts/inquiryContext';
+import { useUserContext } from '@app/contexts/userContext';
+import { AppServices } from '@app/services/index';
 
 const useHome = () => {
-  const a = 2;
+  const navigation = useNavigation();
+  const { user } = useUserContext();
+  const { inquiryList, setInquiryList } = useInquiryContext();
 
-  const onSignIn = async () => {
-    try {
-      const user = await DatabaseServices.auth.signIn({ email: 'jackson.batista@mblabs.com.br', password: 'teste123' });
-      console.log(user);
-    } catch (error) {
-      const err = error as Error;
-      console.log(err.message);
-    }
-  };
+  useEffect(() => {
+    const fetchInquiry = async () => {
+      const inquiries = await AppServices.inquiry.getInquiry();
+      setInquiryList(inquiries);
+    };
 
-  return { a, onSignIn };
+    fetchInquiry();
+  }, [setInquiryList]);
+
+  return { user, inquiryList };
 };
 
 export { useHome };

@@ -5,7 +5,7 @@ import React, {
 import { UserModel } from '@app/models/user';
 
 type UserContextValue = {
-  user : UserModel,
+  user: UserModel,
   setUser: Dispatch<SetStateAction<UserModel>>;
 };
 
